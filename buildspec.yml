@@ -6,11 +6,13 @@ phases:
       java: corretto11
   build:
     commands:
+      -	echo "Entered build phase"
       - mvn clean install
   post_build:
     commands:
-      - echo Build completed
+    
+      - echo "Build completed"
 artifacts:
   files:
-    - target/*.jar
+    - deploy /**/*
   discard-paths: yes
